@@ -18,24 +18,55 @@ class Posts extends Seeder
     {
 
         $random = Random::create();
-        for ($count = 1; $count <= 10; $count++) {
-            DB::table('posts')->insert([
-                'userId' => (rand(1, 20)),
-                'title' => $random->title(),
+        DB::table('posts')->insert([
+
+            [
+                'userId' => "5",
+                'title' => "Static Website Developer",
                 'time'  => "Full Time",
-                'price'  => "$" . (rand(1, 10)),
-                'hr'  => "hr",
+                'price'  => "$70",
                 'country'  => $random->country(),
-                'description'  =>  $random->asciify('Random Character For Testing'),
-            ]);
-            // DB::table('posts')->insert([
-            //     'userId' => (rand(1, 13)),
-            //     'title' => $random->title(),
-            //     'time'  => "Full Time",
-            //     'price'  => "$" . (rand(1, 10)),
-            //     'hr'  => "hr",
-            //     'description'  =>  $random->asciify('Random Character For Testing'),
-            // ]);
-        }
+                'first_skill'  => 'Html',
+                'description'  =>  'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, illo!',
+            ],
+            [
+                'userId' => "3",
+                'title' => "Front-end Developer",
+                'time'  => "Hourly",
+                'price'  => "$30",
+                'country'  => $random->country(),
+                'first_skill'  => 'Css',
+                'description'  =>  'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, illo!',
+            ],
+            [
+                'userId' => "1",
+                'title' => "Php Expert",
+                'time'  => "Part Time",
+                'price'  => "$50",
+                'country'  => $random->country(),
+                'first_skill'  => 'Php',
+                'description'  =>  'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, illo!',
+            ],
+            [
+                'userId' => "4",
+                'title' => "Wordpress Developer",
+                'time'  => "Full Time",
+                'price'  => "$100",
+                'country'  => $random->country(),
+                'first_skill'  => 'Wordpress',
+                'description'  =>  'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, illo!',
+            ],
+            [
+                'userId' => "2",
+                'title' => "Javascript Expert",
+                'time'  => "Full Time",
+                'price'  => "$89",
+                'country'  => $random->country(),
+                'first_skill'  => 'Javascript',
+                'description'  =>  'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, illo!',
+            ],
+
+
+        ]);
     }
 }

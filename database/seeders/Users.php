@@ -17,7 +17,7 @@ class Users extends Seeder
     public function run()
     {
         $random = Random::create();
-        for ($count = 0; $count <= 10; $count++) {
+        for ($i = 1; $i <= 5; $i++) {
             DB::table('users')->insert([
                 'name' => $random->name(),
                 'country' => $random->country(),
@@ -27,10 +27,10 @@ class Users extends Seeder
             DB::table('users')->insert([
                 'name' => $random->name(),
                 'country' => $random->country(),
-                'category'  => "Company",
+                'category'  => "company",
                 'role'  => "company",
                 'password'  => bcrypt('company'),
             ]);
-        }
+        };
     }
 }

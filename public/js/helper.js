@@ -15,7 +15,7 @@ $(document).ready(function () {
 
     // Fillter Availabilty
     $("#filterPosts").click(function () {
-        var getValue = $(".filtterByCountry").val()
+        var getValue = $(".filtterByCountry").val().toLowerCase();
         $(".fillterSkillsFromPosts").filter(function () {
             $(this).toggle($(this).text().toLowerCase().indexOf(getValue) > -1)
         });
