@@ -17,20 +17,44 @@ class Users extends Seeder
     public function run()
     {
         $random = Random::create();
-        for ($i = 1; $i <= 5; $i++) {
-            DB::table('users')->insert([
-                'name' => $random->name(),
-                'country' => $random->country(),
-                'category'  => "full Time",
+        DB::table('users')->insert([
+            [
+                'name' => "Ahsan",
+                'country' => "Pakistan",
+                'category'  => "partTime",
                 'password'  => bcrypt('user'),
-            ]);
-            DB::table('users')->insert([
-                'name' => $random->name(),
-                'country' => $random->country(),
-                'category'  => "company",
-                'role'  => "company",
+            ],
+
+            [
+                'name' => "Jameel",
+                'country' => "Armenia",
+                'category'  => "hourly",
+                'password'  => bcrypt('user'),
+            ],
+            [
+                'name' => "Hameed",
+                'country' => "Brazil",
+                'category'  => "partTime",
+                'password'  => bcrypt('user'),
+            ]
+
+
+        ]);
+        DB::table('users')->insert([
+            [
+                'name' => "Hameed",
+                'country' => "ghana",
+                'category'  => "fullTime",
+                'role' => 'company',
                 'password'  => bcrypt('company'),
-            ]);
-        };
+            ],
+            [
+                'name' => "Hameed",
+                'country' => "Ukraine",
+                'category'  => "fullTime",
+                'role' => 'company',
+                'password'  => bcrypt('company'),
+            ],
+        ]);
     }
 }
