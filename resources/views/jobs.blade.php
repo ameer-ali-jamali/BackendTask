@@ -140,7 +140,6 @@
                                                     <option>Hourly</option>
                                                     <option>Part Time</option>
                                                     <option>Full Time</option>
-
                                                 </select>
                                             </div>
                                             <div class="filter-dd">
@@ -148,8 +147,7 @@
                                                     <h3>Pay Rate / Hr ($)</h3>
                                                 </div>
                                                 <div class="rg-slider">
-                                                    <input class="rn-slider slider-input" type="hidden" value="5,50"
-                                                        id="payRateHourly" />
+                                                    <input class="rn-slider slider-input" type="hidden" value="5,50" />
                                                 </div>
                                                 <div class="rg-limit">
                                                     <h4>1</h4>
@@ -160,11 +158,18 @@
                                                 <div class="filter-ttl">
                                                     <h3>Countries</h3>
                                                 </div>
-                                                <select class="form-control form-control-sm">
-                                                    <option>Select a country</option>
-                                                    <option>United Kingdom</option>
-                                                    <option>United States</option>
-                                                    <option>Russia</option>
+                                                <select class="form-control form-control-sm filtterByCountry"
+                                                    name="countries">
+                                                    <option selected>Select Country</option>
+                                                    <option value="tanzania">Tanzania</option>
+                                                    <option value="newCaledonia">New Caledonia</option>
+                                                    <option value="Jamaica">Jamaica</option>
+                                                    <option value="unitedKingdom">United Kingdom</option>
+                                                    <option value="unitedStates">United States</option>
+                                                    <option value="russia">Russia</option>
+                                                    <option value="pakistan">Pakistan</option>
+                                                    <option value="zambia">Zambia</option>
+                                                    <option value="india">India</option>
                                                 </select>
                                             </div>
                                             <input class="btn btn-block text-white" type="submit" id="filterPosts"
@@ -325,7 +330,7 @@
                                                                                 alt=""><span>Epic
                                                                                 Coder</span></li>
                                                                         <li><img src="images/icon9.png"
-                                                                                alt=""><span>India</span>
+                                                                                alt=""><span>{{ $allPost->country }}</span>
                                                                         </li>
                                                                     </ul>
                                                                 </div>

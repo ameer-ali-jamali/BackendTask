@@ -1,6 +1,6 @@
 $(document).ready(function () {
+    // Closing the alert
     setTimeout(function () {
-        // Closing the alert
         $('#authAlert').alert('close');
         $('#alertDanger').alert('close');
     }, 4000);
@@ -14,17 +14,13 @@ $(document).ready(function () {
     });
 
     // Fillter Availabilty
-    // var hourly = $('#hourly').val = "hourly"
-    // var partTime = $('#hourly').val = "partTime"
-    // var fullTime = $('#hourly').val = "fullTime"
-    var payRate = $('#payRateHourly').val();
-    $('#filterPosts').click(function () {
-        alert(payRate);
+    $("#filterPosts").click(function () {
+        var getValue = $(".filtterByCountry").val()
+        $(".fillterSkillsFromPosts").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(getValue) > -1)
+        });
     })
-    // var value = $(this).val().toLowerCase();
-    // $(".fillterSkillsFromPosts").filter(function () {
-    //     $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    // });
+
 
 
 
