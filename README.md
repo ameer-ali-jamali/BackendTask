@@ -16,7 +16,7 @@ Please install following to get started with the project.
 
 * [WAMP 32 bit](https://www.wampserver.com/en/)
 * [Composer](https://getcomposer.org/)
-* [Laravel](https://laravel.com/)
+* [Laravel 9.x](https://laravel.com/)
 
 ## Getting Started
 Download the code from repository and follow below given instructions.
@@ -38,16 +38,20 @@ php artisan db:seed
 php artisan serve
 ```
 
-
 ## Known Errors
 * NO APPLICATION ENCRYPTION KEY HAS BEEN SPECIFIED
 
 If you face above issue after running all the above steps & commands, try clicking `Generate App Key` button and refresh the page.
 
+## Random Users
+* After This Some Random Users Will Added In Database . 
+* Check User Name From Database .
+* Role > User Password is (user) .
+* Role > company password is (company) .
 
 ## Built With
 
-* [Laravel](https://laravel.com/)
+* [Laravel 9.x](https://laravel.com/)
 
 
 ## Author
