@@ -334,6 +334,7 @@
                                                                         </li>
                                                                     </ul>
                                                                 </div>
+
                                                                 <div class="job_descp">
                                                                     <h3>{{ $allPost->title }}</h3>
                                                                     <ul class="job-dt">
