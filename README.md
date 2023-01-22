@@ -23,6 +23,7 @@ Download the code from repository and follow below given instructions.
 * Create `std` named database.
 * Rename `.env.example` to `.env`.
 
+![Screenshot (112)](https://user-images.githubusercontent.com/99552615/213943187-ea29ad03-6b7b-4790-8c71-ee1a1c096f6a.png)
 
 ### Running
 Run the following commands in order.
