@@ -49,5 +49,5 @@ If you face above issue after running all the above steps & commands, try clicki
 * [Laravel](https://laravel.com/)
 
 
-## Authors
+## Author
 * **Ameer Ali Jamali**
