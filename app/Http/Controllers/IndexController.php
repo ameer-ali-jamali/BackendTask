@@ -55,8 +55,7 @@ class IndexController extends Controller
         try {
             $company->save();
         } catch (\Throwable $th) {
-            return $th;
-            // return redirect('/')->with('errorMessage', 'Datbase Erorr')->with('className', 'danger');
+            return redirect('/')->with('errorMessage', 'Datbase Erorr')->with('className', 'danger');
         }
         return redirect('/')->with('errorMessage', 'Registered SuccessFully')->with('className', 'success');
     }

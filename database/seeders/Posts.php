@@ -25,6 +25,7 @@ class Posts extends Seeder
                 'time'  => "Full Time",
                 'price'  => "$" . (rand(1, 10)),
                 'hr'  => "hr",
+                'country'  => $random->country(),
                 'description'  =>  $random->asciify('Random Character For Testing'),
             ]);
             // DB::table('posts')->insert([

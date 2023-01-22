@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('time');
             $table->string('price');
             $table->string('hr');
+            $table->string('country');
             $table->string('description');
             $table->string('first_skill')->default('Html');
             $table->string('second_skill')->default('Php');
