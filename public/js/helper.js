@@ -16,6 +16,7 @@ $(document).ready(function () {
     // Fillter Availabilty
     $("#filterPosts").click(function () {
         var getValue = $(".filtterByCountry").val().toLowerCase();
+        var vals = "part Time"
         $(".fillterSkillsFromPosts").filter(function () {
             $(this).toggle($(this).text().toLowerCase().indexOf(getValue) > -1)
         });
