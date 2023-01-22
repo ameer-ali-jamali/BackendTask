@@ -23,7 +23,7 @@ class Posts extends Seeder
             [
                 'userId' => "5",
                 'title' => "Static Website Developer",
-                'time'  => "partTime",
+                'time'  => "parttime",
                 'price'  => "$70",
                 'country'  => "Ukraine",
                 'first_skill'  => 'Html',
@@ -32,7 +32,7 @@ class Posts extends Seeder
             [
                 'userId' => "3",
                 'title' => "Front-end Developer",
-                'time'  => "Hourly",
+                'time'  => "hourly",
                 'price'  => "$30",
                 'country'  => "Brazil",
                 'first_skill'  => 'Css',
@@ -41,7 +41,7 @@ class Posts extends Seeder
             [
                 'userId' => "1",
                 'title' => "Php Expert",
-                'time'  => "Part Time",
+                'time'  => "parttime",
                 'price'  => "$50",
                 'country'  => "Pakistan",
                 'first_skill'  => 'Php',
@@ -50,7 +50,7 @@ class Posts extends Seeder
             [
                 'userId' => "4",
                 'title' => "Wordpress Developer",
-                'time'  => "Full Time",
+                'time'  => "fulltime",
                 'price'  => "$100",
                 'country'  => "Ghana",
                 'first_skill'  => 'Wordpress',
@@ -59,7 +59,7 @@ class Posts extends Seeder
             [
                 'userId' => "2",
                 'title' => "Javascript Expert",
-                'time'  => "Full Time",
+                'time'  => "fulltime",
                 'price'  => "$89",
                 'country'  => "Armenia",
                 'first_skill'  => 'Javascript',

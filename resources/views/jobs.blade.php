@@ -62,7 +62,7 @@
                         </div>
                         <div class="user-account">
                             <div class="user-info">
-                                <img src="images/resources/user.png" alt="">
+                                {{-- <img src="images/resources/user.png" alt=""> --}}
                                 <a href="#" title="">{{ Auth::user()->name }}</a>
                                 <i class="la la-sort-down"></i>
                             </div>
@@ -108,27 +108,27 @@
                                                 <div class="filter-ttl">
                                                     <h3>Availabilty</h3>
                                                 </div>
-                                                <ul class="avail-checks">
+                                                <ul class="avail-checks filterByTiming">
                                                     <li>
                                                         <input type="radio" name="cc" id="c1">
                                                         <label for="c1">
                                                             <span></span>
                                                         </label>
-                                                        <small id="hourly">Hourly</small>
+                                                        <small value="hourly">Hourly</small>
                                                     </li>
                                                     <li>
                                                         <input type="radio" name="cc" id="c2">
                                                         <label for="c2">
                                                             <span></span>
                                                         </label>
-                                                        <small id="partTime">Part Time</small>
+                                                        <small value="partTime">Part Time</small>
                                                     </li>
                                                     <li>
                                                         <input type="radio" name="cc" id="c3">
                                                         <label for="c3">
                                                             <span></span>
                                                         </label>
-                                                        <small id="fullTime">Full Time</small>
+                                                        <small value="fullTime">Full Time</small>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -136,10 +136,11 @@
                                                 <div class="filter-ttl">
                                                     <h3>Job Type</h3>
                                                 </div>
-                                                <select class="form-control form-control-sm">
-                                                    <option>Hourly</option>
-                                                    <option>Part Time</option>
-                                                    <option>Full Time</option>
+                                                <select class="form-control form-control-sm filterByTiming">
+                                                    <option value="#" disabled selected>Select Timig</option>
+                                                    <option value="hourly">Hourly</option>
+                                                    <option value="partTime">Part Time</option>
+                                                    <option value="fullTime">Full Time</option>
                                                 </select>
                                             </div>
                                             <div class="filter-dd">
@@ -147,7 +148,7 @@
                                                     <h3>Pay Rate / Hr ($)</h3>
                                                 </div>
                                                 <div class="rg-slider">
-                                                    <input class="rn-slider slider-input" type="hidden" value="5,50" />
+                                                    <input class="rn-slider slider-input" type="hidden" value="" />
                                                 </div>
                                                 <div class="rg-limit">
                                                     <h4>1</h4>
@@ -158,8 +159,9 @@
                                                 <div class="filter-ttl">
                                                     <h3>Countries</h3>
                                                 </div>
-                                                <select class="form-control form-control-sm filtterByCountry"
+                                                <select class="form-control form-control-sm filterByCountry"
                                                     name="countries">
+                                                    <option value="#" disabled selected>Select Country</option>
                                                     <option value="afghanistan">Afghanistan</option>
                                                     <option value="alandIslands">Åland Islands</option>
                                                     <option value="albania">Albania</option>
@@ -169,7 +171,7 @@
                                                     <option value="angola">Angola</option>
                                                     <option value="anguilla">Anguilla</option>
                                                     <option value="antarctica">Antarctica</option>
-                                                    <option value="antigua and Barbuda">Antigua and Barbuda</option>
+                                                    <option value="antigua_and_Barbuda">Antigua and Barbuda</option>
                                                     <option value="argentina">Argentina</option>
                                                     <option value="armenia">Armenia</option>
                                                     <option value="aruba">Aruba</option>
@@ -187,14 +189,14 @@
                                                     <option value="bermuda">Bermuda</option>
                                                     <option value="bhutan">Bhutan</option>
                                                     <option value="bolivia">Bolivia</option>
-                                                    <option value="bosnia and herzegovina">Bosnia and Herzegovina
+                                                    <option value="bosnia_and_herzegovina">Bosnia and Herzegovina
                                                     </option>
                                                     <option value="botswana">Botswana</option>
-                                                    <option value="bouvet island">Bouvet Island</option>
+                                                    <option value="bouvet_island">Bouvet Island</option>
                                                     <option value="brazil">Brazil</option>
-                                                    <option value="british Indian Ocean Territory">British Indian Ocean
+                                                    <option value="british_Indian_Ocean_Territory">British Indian Ocean
                                                         Territory</option>
-                                                    <option value="bruneiDarussalam">Brunei Darussalam</option>
+                                                    <option value="brunei_Darussalam">Brunei Darussalam</option>
                                                     <option value="bulgaria">Bulgaria</option>
                                                     <option value="burkinaFaso">Burkina Faso</option>
                                                     <option value="burundi">Burundi</option>
@@ -203,18 +205,18 @@
                                                     <option value="canada">Canada</option>
                                                     <option value="capeVerde">Cape Verde</option>
                                                     <option value="caymanIslands">Cayman Islands</option>
-                                                    <option value="centralAfricanRepublic">Central African Republic
+                                                    <option value="central_African_Republic">Central African Republic
                                                     </option>
                                                     <option value="chad">Chad</option>
                                                     <option value="chile">Chile</option>
                                                     <option value="china">China</option>
-                                                    <option value="christmas Island">Christmas Island</option>
-                                                    <option value="cocos(Keeling)Islands">Cocos (Keeling) Islands
+                                                    <option value="christmas_island">Christmas Island</option>
+                                                    <option value="cocos_(keeling)_islands">Cocos (Keeling) Islands
                                                     </option>
                                                     <option value="colombia">Colombia</option>
                                                     <option value="comoros">Comoros</option>
                                                     <option value="congo">Congo</option>
-                                                    <option value="congo,The Democratic Republic of The">Congo, The
+                                                    <option value="congo_the_democratic_republic_of_The">Congo, The
                                                         Democratic Republic of The</option>
                                                     <option value="cookIslands">Cook Islands</option>
                                                     <option value="costaRica">Costa Rica</option>
@@ -242,7 +244,7 @@
                                                     <option value="france">France</option>
                                                     <option value="frenchGuiana">French Guiana</option>
                                                     <option value="frenchPolynesia">French Polynesia</option>
-                                                    <option value="frenchSouthern Territories">French Southern
+                                                    <option value="frenchSouthern_Territories">French Southern
                                                         Territories</option>
                                                     <option value="gabon">Gabon</option>
                                                     <option value="gambia">Gambia</option>
@@ -275,7 +277,7 @@
                                                     </option>
                                                     <option value="iraq">Iraq</option>
                                                     <option value="ireland">Ireland</option>
-                                                    <option value="isle of Man">Isle of Man</option>
+                                                    <option value="isle_of_Man">Isle of Man</option>
                                                     <option value="israel">Israel</option>
                                                     <option value="italy">Italy</option>
                                                     <option value="jamaica">Jamaica</option>
@@ -285,12 +287,12 @@
                                                     <option value="kazakhstan">Kazakhstan</option>
                                                     <option value="kenya">Kenya</option>
                                                     <option value="kiribati">Kiribati</option>
-                                                    <option value="korea, Democratic People's Republic of">Korea,
+                                                    <option value="korea_democratic_people's_republic of">Korea,
                                                         Democratic People's Republic of</option>
-                                                    <option value="korea, Republic of">Korea, Republic of</option>
+                                                    <option value="korea_republic_of">Korea, Republic of</option>
                                                     <option value="kuwait">Kuwait</option>
                                                     <option value="kyrgyzstan">Kyrgyzstan</option>
-                                                    <option value="Lao_People's Democratic Republic">Lao People's
+                                                    <option value="laoPeople's_democratic_republic">Lao People's
                                                         Democratic Republic</option>
                                                     <option value="latvia">Latvia</option>
                                                     <option value="lebanon">Lebanon</option>
@@ -302,7 +304,7 @@
                                                     <option value="lithuania">Lithuania</option>
                                                     <option value="luxembourg">Luxembourg</option>
                                                     <option value="macao">Macao</option>
-                                                    <option value="macedonia, The Former Yugoslav Republic of">
+                                                    <option value="macedonia_the_former_yugoslav_republic_of">
                                                         Macedonia, The Former Yugoslav Republic of</option>
                                                     <option value="madagascar">Madagascar</option>
                                                     <option value="malawi">Malawi</option>
@@ -310,15 +312,15 @@
                                                     <option value="maldives">Maldives</option>
                                                     <option value="mali">Mali</option>
                                                     <option value="malta">Malta</option>
-                                                    <option value="marshall Islands">Marshall Islands</option>
+                                                    <option value="marshall_islands">Marshall Islands</option>
                                                     <option value="martinique">Martinique</option>
                                                     <option value="mauritania">Mauritania</option>
                                                     <option value="mauritius">Mauritius</option>
                                                     <option value="mayotte">Mayotte</option>
                                                     <option value="mexico">Mexico</option>
-                                                    <option value="micronesia, Federated States of">Micronesia,
+                                                    <option value="micronesia_federated_states_of">Micronesia,
                                                         Federated States of</option>
-                                                    <option value="moldova, Republic of">Moldova, Republic of</option>
+                                                    <option value="moldova_republic_of">Moldova, Republic of</option>
                                                     <option value="monaco">Monaco</option>
                                                     <option value="mongolia">Mongolia</option>
                                                     <option value="montenegro">Montenegro</option>
@@ -347,18 +349,18 @@
                                                     <option value="palestinian_Territory, Occupied">Palestinian
                                                         Territory, Occupied</option>
                                                     <option value="panama">Panama</option>
-                                                    <option value="papua New Guinea">Papua New Guinea</option>
+                                                    <option value="papua_new_guinea">Papua New Guinea</option>
                                                     <option value="paraguay">Paraguay</option>
                                                     <option value="peru">Peru</option>
                                                     <option value="philippines">Philippines</option>
                                                     <option value="pitcairn">Pitcairn</option>
                                                     <option value="poland">Poland</option>
                                                     <option value="portugal">Portugal</option>
-                                                    <option value="puerto Rico">Puerto Rico</option>
+                                                    <option value="puerto_rico">Puerto Rico</option>
                                                     <option value="qatar">Qatar</option>
                                                     <option value="reunion">Reunion</option>
                                                     <option value="romania">Romania</option>
-                                                    <option value="russianFederation">Russian Federation</option>
+                                                    <option value="russian_federation">Russian Federation</option>
                                                     <option value="rwanda">Rwanda</option>
                                                     <option value="saintHelena">Saint Helena</option>
                                                     <option value="saintKitts and Nevis">Saint Kitts and Nevis</option>
@@ -374,35 +376,35 @@
                                                     <option value="senegal">Senegal</option>
                                                     <option value="serbia">Serbia</option>
                                                     <option value="seychelles">Seychelles</option>
-                                                    <option value="sierra Leone">Sierra Leone</option>
+                                                    <option value="sierra_leone">Sierra Leone</option>
                                                     <option value="singapore">Singapore</option>
                                                     <option value="slovakia">Slovakia</option>
                                                     <option value="slovenia">Slovenia</option>
-                                                    <option value="solomon Islands">Solomon Islands</option>
+                                                    <option value="solomon_islands">Solomon Islands</option>
                                                     <option value="somalia">Somalia</option>
                                                     <option value="south_Africa">South Africa</option>
                                                     <option value="south_Georgia_and_The_South_Sandwich_Islands">South
                                                         Georgia and The South Sandwich Islands</option>
                                                     <option value="spain">Spain</option>
-                                                    <option value="sri Lanka">Sri Lanka</option>
+                                                    <option value="sri_Lanka">Sri Lanka</option>
                                                     <option value="sudan">Sudan</option>
                                                     <option value="suriname">Suriname</option>
-                                                    <option value="svalbard and Jan Mayen">Svalbard and Jan Mayen
+                                                    <option value="svalbard_and_jan_mayen">Svalbard and Jan Mayen
                                                     </option>
                                                     <option value="swaziland">Swaziland</option>
                                                     <option value="sweden">Sweden</option>
                                                     <option value="switzerland">Switzerland</option>
-                                                    <option value="syrian Arab Republic">Syrian Arab Republic</option>
+                                                    <option value="syrian_arab_republic">Syrian Arab Republic</option>
                                                     <option value="taiwan">Taiwan</option>
                                                     <option value="tajikistan">Tajikistan</option>
-                                                    <option value="tanzania, United Republic of">Tanzania, United
+                                                    <option value="tanzania_united_republic_of">Tanzania, United
                                                         Republic of</option>
                                                     <option value="thailand">Thailand</option>
                                                     <option value="timor-leste">Timor-leste</option>
                                                     <option value="togo">Togo</option>
                                                     <option value="tokelau">Tokelau</option>
                                                     <option value="tonga">Tonga</option>
-                                                    <option value="trinidad and Tobago">Trinidad and Tobago</option>
+                                                    <option value="trinidad_and_tobago">Trinidad and Tobago</option>
                                                     <option value="tunisia">Tunisia</option>
                                                     <option value="turkey">Turkey</option>
                                                     <option value="turkmenistan">Turkmenistan</option>
@@ -431,6 +433,7 @@
                                                     <option value="zimbabwe">Zimbabwe</option>
                                                 </select>
                                             </div>
+
                                             <input class="btn btn-block text-white" type="submit" id="filterPosts"
                                                 value="Filter" style="background-color: #e44d3a;">
                                         </div>
@@ -463,7 +466,7 @@
 
                                                         @if ($userPosts->count())
                                                         @foreach ($userPosts as $userPost)
-                                                        <div class="fillterSkillsFromPosts">
+                                                        <div class="filterSkillsFromPosts">
                                                             <div class="post-bar">
                                                                 <div class="post_topbar">
                                                                     <div class="usy-dt">
@@ -558,7 +561,7 @@
                                                     <div class="container">
                                                         @if ($allPosts->count())
                                                         @foreach ($allPosts as $allPost)
-                                                        <div class="fillterSkillsFromPosts">
+                                                        <div class="filterSkillsFromPosts">
                                                             <div class="post-bar">
                                                                 <div class="post_topbar">
                                                                     <div class="usy-dt">
@@ -596,12 +599,14 @@
                                                                 </div>
 
                                                                 <div class="job_descp">
+
                                                                     <h3>{{ $allPost->title }}</h3>
+
                                                                     <ul class="job-dt">
                                                                         <li><a href="#"
                                                                                 title="">{{ $allPost->time }}</a>
                                                                         </li>
-                                                                        <li><span>{{ $allPost->price }}
+                                                                        <li><span>{{ $allPost->price }} /
                                                                                 {{ $allPost->hr }}</span></li>
                                                                     </ul>
                                                                     <p>

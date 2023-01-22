@@ -41,7 +41,7 @@ class IndexController extends Controller
         $request->validate(
             [
                 'company_name' => 'required',
-                'company_country' => 'required',
+                'company_country_name' => 'required',
                 'password' => 'required|confirmed',
                 'password_confirmation' => 'required',
                 'terms_&_Conditions' => 'required',
@@ -50,7 +50,7 @@ class IndexController extends Controller
         $company = new User();
         $company->name = $request->company_name;
         $company->role = "company";
-        $company->country = $request->company_country;
+        $company->country = $request->company_country_name;
         $company->password = $request->password;
         try {
             $company->save();
