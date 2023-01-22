@@ -44,10 +44,10 @@ php artisan serve
 If you face above issue after running all the above steps & commands, try clicking `Generate App Key` button and refresh the page.
 
 ## Random Users
-* After This Some Random Users Will Added In Database . 
-* Check User Name From Database .
-* Role > User Password is (user) .
-* Role > company password is (company) .
+* After This Some Random Users Will Added In Database
+* Check User Name From Database
+* Role > User Password is (user)
+* Role > company password is (company)
 
 ## Built With
 
