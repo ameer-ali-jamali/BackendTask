@@ -10,6 +10,8 @@
 # Freelance like Job Portal
 A sample freelance type job portal where a user can post jobs and search others using multiple filters. Application is built using Laravel Php.
 
+## How to run and live demo 
+https://user-images.githubusercontent.com/99552615/214522275-341aa4aa-5b57-4d38-b928-04277c1bc8da.mp4
 
 ## Pre-requisite
 Please install following to get started with the project.
@@ -52,7 +54,6 @@ If you face above issue after running all the above steps & commands, try clicki
 ## Built With
 
 * [Laravel 9.x](https://laravel.com/)
-
 
 ## Author
 * **Ameer Ali Jamali**
